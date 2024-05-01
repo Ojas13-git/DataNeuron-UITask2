@@ -116,7 +116,7 @@ const Table = () => {
     const [updateExecTime, setUpdateExecTime] = useState('');
 
     useEffect(() => {
-        axios.get('https://ojas13-git.github.io/dataneuron-task2api/db.json/users')
+        axios.get('https://ojas13-git.github.io/dataneuron-task2api/db.json')
             .then(res => setData(res.data))
             .catch(err => console.log(err));
     }, []);
@@ -125,7 +125,7 @@ const Table = () => {
         event.preventDefault();
         const id = data[data.length - 1].id + 1;
         const startTime = new Date();
-        axios.post('https://ojas13-git.github.io/dataneuron-task2api/db.json/users', { id: id, name: name, email: email })
+        axios.post('https://ojas13-git.github.io/dataneuron-task2api/db.json', { id: id, name: name, email: email })
             .then(res => {
                 const endTime = new Date();
                 setAddExecTime((endTime - startTime) / 1000 + " seconds");
@@ -136,7 +136,7 @@ const Table = () => {
     };
 
     const handleEdit = (id) => {
-        axios.get('https://ojas13-git.github.io/dataneuron-task2api/db.json/users' + id)
+        axios.get('https://ojas13-git.github.io/dataneuron-task2api/db.json' + id)
             .then(res => {
                 console.log(res.data);
                 setUName(res.data.name);
@@ -147,7 +147,7 @@ const Table = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete('https://ojas13-git.github.io/dataneuron-task2api/db.json/users' + id)
+        axios.delete('https://ojas13-git.github.io/dataneuron-task2api/db.json' + id)
             .then(res => {
                 window.location.reload();
             })
@@ -156,7 +156,7 @@ const Table = () => {
 
     const handleUpdate = () => {
         const startTime = new Date();
-        axios.put('https://ojas13-git.github.io/dataneuron-task2api/db.json/users' + editId, { id: editId, name: uname, email: uemail })
+        axios.put('https://ojas13-git.github.io/dataneuron-task2api/db.json' + editId, { id: editId, name: uname, email: uemail })
             .then(res => {
                 const endTime = new Date();
                 setUpdateExecTime((endTime - startTime) / 1000 + " seconds");
