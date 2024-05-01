@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DataNeuron-UITask2/static/css/main.556ebe2b.css",
-    "main.js": "/DataNeuron-UITask2/static/js/main.77b3ed4d.js",
+    "main.js": "/DataNeuron-UITask2/static/js/main.93dc13fd.js",
     "index.html": "/DataNeuron-UITask2/index.html",
     "main.556ebe2b.css.map": "/DataNeuron-UITask2/static/css/main.556ebe2b.css.map",
-    "main.77b3ed4d.js.map": "/DataNeuron-UITask2/static/js/main.77b3ed4d.js.map"
+    "main.93dc13fd.js.map": "/DataNeuron-UITask2/static/js/main.93dc13fd.js.map"
   },
   "entrypoints": [
     "static/css/main.556ebe2b.css",
-    "static/js/main.77b3ed4d.js"
+    "static/js/main.93dc13fd.js"
   ]
 }
